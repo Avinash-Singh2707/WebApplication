@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RailDBModelStoreContainer" CdmEntityContainer="RailDBEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="RailDBModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="admin_id" ColumnName="admin-id" />
+          <ScalarProperty Name="Admin_name" ColumnName="Admin-name" />
+          <ScalarProperty Name="admin_password" ColumnName="admin-password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookTickets">
+      <EntityTypeMapping TypeName="RailDBModel.bookTicket">
+        <MappingFragment StoreEntitySet="bookTicket">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NumberTickets" ColumnName="NumberTickets" />
+          <ScalarProperty Name="Class_type" ColumnName="Class_type" />
+          <ScalarProperty Name="Book_Id" ColumnName="Book-Id" />
+          <ScalarProperty Name="user_id" ColumnName="user-id" />
+          <ScalarProperty Name="train_no" ColumnName="train_no" />
+          <ScalarProperty Name="total_fare" ColumnName="total-fare" />
+          <ScalarProperty Name="Booking_Date_Time" ColumnName="Booking-Date-Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cancelTickets">
+      <EntityTypeMapping TypeName="RailDBModel.cancelTicket">
+        <MappingFragment StoreEntitySet="cancelTicket">
+          <ScalarProperty Name="Cancelled_date_time" ColumnName="Cancelled-date-time" />
+          <ScalarProperty Name="Cancel_Id" ColumnName="Cancel-Id" />
+          <ScalarProperty Name="Book_Id" ColumnName="Book-Id" />
+          <ScalarProperty Name="user_id" ColumnName="user-id" />
+          <ScalarProperty Name="train_no" ColumnName="train_no" />
+          <ScalarProperty Name="Refund_Amount" ColumnName="Refund-Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trains">
+      <EntityTypeMapping TypeName="RailDBModel.train">
+        <MappingFragment StoreEntitySet="train">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="train_no" ColumnName="train_no" />
+          <ScalarProperty Name="train_name" ColumnName="train_name" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_details">
+      <EntityTypeMapping TypeName="RailDBModel.user_details">
+        <MappingFragment StoreEntitySet="user_details">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="user_id" ColumnName="user-id" />
+          <ScalarProperty Name="user_name" ColumnName="user-name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_Avail">
+      <EntityTypeMapping TypeName="RailDBModel.class_Avail">
+        <MappingFragment StoreEntitySet="class_Avail">
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="train_no" ColumnName="train_no" />
+          <ScalarProperty Name="C1_AC_seat_Avail" ColumnName="1-AC-seat-Avail" />
+          <ScalarProperty Name="C2_AC_seat_Avail" ColumnName="2-AC-seat-Avail" />
+          <ScalarProperty Name="SL_seat_Avail" ColumnName="SL-seat-Avail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fares">
+      <EntityTypeMapping TypeName="RailDBModel.fare">
+        <MappingFragment StoreEntitySet="fare">
+          <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
+          <ScalarProperty Name="train_no" ColumnName="train_no" />
+          <ScalarProperty Name="C1_AC_fare" ColumnName="1-AC-fare" />
+          <ScalarProperty Name="C2_AC_fare" ColumnName="2-AC-fare" />
+          <ScalarProperty Name="SL_fare" ColumnName="SL_fare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateBookedTicket" FunctionName="RailDBModel.Store.UpdateBookedTicket" />
+    <FunctionImportMapping FunctionImportName="UpdateCancelTicket" FunctionName="RailDBModel.Store.UpdateCancelTicket" />
+    <FunctionImportMapping FunctionImportName="AddclassSeats" FunctionName="RailDBModel.Store.AddclassSeats" />
+    <FunctionImportMapping FunctionImportName="AddclassFair" FunctionName="RailDBModel.Store.AddclassFair" />
+  </EntityContainerMapping>
+</Mapping>

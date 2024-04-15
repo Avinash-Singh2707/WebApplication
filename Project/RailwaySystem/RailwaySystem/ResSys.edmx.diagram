@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="240362430ba748058a2299c6267b088e" Name="Diagram1">
+        <EntityTypeShape EntityType="RailDBModel.admin" Width="1.5" PointX="7.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.bookTicket" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.cancelTicket" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.train" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.user_details" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.class_Avail" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RailDBModel.fare" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="RailDBModel.FK__bookTicke__train__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__bookTicke__user___403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__cancelTic__Book___440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__cancelTic__train__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__cancelTic__user___44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__class_Ava__train__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="RailDBModel.FK__fare__train_no__398D8EEE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

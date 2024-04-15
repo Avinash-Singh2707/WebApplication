@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RailDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="Int32" Nullable="false" />
+    <Property Name="Admin_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="admin_password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bookTicket">
+    <Key>
+      <PropertyRef Name="Book_Id" />
+    </Key>
+    <Property Name="Book_Id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="train_no" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="total_fare" Type="Double" />
+    <Property Name="Booking_Date_Time" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="train" Relationship="Self.FK__bookTicke__train__412EB0B6" FromRole="bookTicket" ToRole="train" />
+    <NavigationProperty Name="user_details" Relationship="Self.FK__bookTicke__user___403A8C7D" FromRole="bookTicket" ToRole="user_details" />
+    <NavigationProperty Name="cancelTickets" Relationship="Self.FK__cancelTic__Book___440B1D61" FromRole="bookTicket" ToRole="cancelTicket" />
+    <Property Name="Class_type" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NumberTickets" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="cancelTicket">
+    <Key>
+      <PropertyRef Name="Cancel_Id" />
+    </Key>
+    <Property Name="Cancel_Id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="Book_Id" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="train_no" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="Refund_Amount" Type="Int32" />
+    <NavigationProperty Name="bookTicket" Relationship="Self.FK__cancelTic__Book___440B1D61" FromRole="cancelTicket" ToRole="bookTicket" />
+    <NavigationProperty Name="train" Relationship="Self.FK__cancelTic__train__45F365D3" FromRole="cancelTicket" ToRole="train" />
+    <NavigationProperty Name="user_details" Relationship="Self.FK__cancelTic__user___44FF419A" FromRole="cancelTicket" ToRole="user_details" />
+    <Property Name="Cancelled_date_time" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="train">
+    <Key>
+      <PropertyRef Name="train_no" />
+    </Key>
+    <Property Name="train_no" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="train_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="source" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="destination" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="bookTickets" Relationship="Self.FK__bookTicke__train__412EB0B6" FromRole="train" ToRole="bookTicket" />
+    <NavigationProperty Name="cancelTickets" Relationship="Self.FK__cancelTic__train__45F365D3" FromRole="train" ToRole="cancelTicket" />
+    <NavigationProperty Name="class_Avail" Relationship="Self.FK__class_Ava__train__37A5467C" FromRole="train" ToRole="class_Avail" />
+    <NavigationProperty Name="fares" Relationship="Self.FK__fare__train_no__398D8EEE" FromRole="train" ToRole="fare" />
+    <Property Name="isActive" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="user_details">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="bookTickets" Relationship="Self.FK__bookTicke__user___403A8C7D" FromRole="user_details" ToRole="bookTicket" />
+    <NavigationProperty Name="cancelTickets" Relationship="Self.FK__cancelTic__user___44FF419A" FromRole="user_details" ToRole="cancelTicket" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="class_Avail">
+    <Key>
+      <PropertyRef Name="SerialNo" />
+    </Key>
+    <Property Name="SerialNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="train_no" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="C1_AC_seat_Avail" Type="Int32" />
+    <Property Name="C2_AC_seat_Avail" Type="Int32" />
+    <Property Name="SL_seat_Avail" Type="Int32" />
+    <NavigationProperty Name="train" Relationship="Self.FK__class_Ava__train__37A5467C" FromRole="class_Avail" ToRole="train" />
+  </EntityType>
+  <EntityType Name="fare">
+    <Key>
+      <PropertyRef Name="SequenceNo" />
+    </Key>
+    <Property Name="SequenceNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="train_no" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="C1_AC_fare" Type="Int32" />
+    <Property Name="C2_AC_fare" Type="Int32" />
+    <Property Name="SL_fare" Type="Int32" />
+    <NavigationProperty Name="train" Relationship="Self.FK__fare__train_no__398D8EEE" FromRole="fare" ToRole="train" />
+  </EntityType>
+  <Association Name="FK__bookTicke__train__412EB0B6">
+    <End Role="train" Type="Self.train" Multiplicity="0..1" />
+    <End Role="bookTicket" Type="Self.bookTicket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="train">
+        <PropertyRef Name="train_no" />
+      </Principal>
+      <Dependent Role="bookTicket">
+        <PropertyRef Name="train_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bookTicke__user___403A8C7D">
+    <End Role="user_details" Type="Self.user_details" Multiplicity="0..1" />
+    <End Role="bookTicket" Type="Self.bookTicket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_details">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="bookTicket">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cancelTic__Book___440B1D61">
+    <End Role="bookTicket" Type="Self.bookTicket" Multiplicity="0..1" />
+    <End Role="cancelTicket" Type="Self.cancelTicket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bookTicket">
+        <PropertyRef Name="Book_Id" />
+      </Principal>
+      <Dependent Role="cancelTicket">
+        <PropertyRef Name="Book_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cancelTic__train__45F365D3">
+    <End Role="train" Type="Self.train" Multiplicity="0..1" />
+    <End Role="cancelTicket" Type="Self.cancelTicket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="train">
+        <PropertyRef Name="train_no" />
+      </Principal>
+      <Dependent Role="cancelTicket">
+        <PropertyRef Name="train_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cancelTic__user___44FF419A">
+    <End Role="user_details" Type="Self.user_details" Multiplicity="0..1" />
+    <End Role="cancelTicket" Type="Self.cancelTicket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_details">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="cancelTicket">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__class_Ava__train__37A5467C">
+    <End Role="train" Type="Self.train" Multiplicity="0..1" />
+    <End Role="class_Avail" Type="Self.class_Avail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="train">
+        <PropertyRef Name="train_no" />
+      </Principal>
+      <Dependent Role="class_Avail">
+        <PropertyRef Name="train_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__fare__train_no__398D8EEE">
+    <End Role="train" Type="Self.train" Multiplicity="0..1" />
+    <End Role="fare" Type="Self.fare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="train">
+        <PropertyRef Name="train_no" />
+      </Principal>
+      <Dependent Role="fare">
+        <PropertyRef Name="train_no" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RailDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <EntitySet Name="bookTickets" EntityType="Self.bookTicket" />
+    <EntitySet Name="cancelTickets" EntityType="Self.cancelTicket" />
+    <EntitySet Name="trains" EntityType="Self.train" />
+    <EntitySet Name="user_details" EntityType="Self.user_details" />
+    <EntitySet Name="class_Avail" EntityType="Self.class_Avail" />
+    <EntitySet Name="fares" EntityType="Self.fare" />
+    <AssociationSet Name="FK__bookTicke__train__412EB0B6" Association="Self.FK__bookTicke__train__412EB0B6">
+      <End Role="train" EntitySet="trains" />
+      <End Role="bookTicket" EntitySet="bookTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bookTicke__user___403A8C7D" Association="Self.FK__bookTicke__user___403A8C7D">
+      <End Role="user_details" EntitySet="user_details" />
+      <End Role="bookTicket" EntitySet="bookTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cancelTic__Book___440B1D61" Association="Self.FK__cancelTic__Book___440B1D61">
+      <End Role="bookTicket" EntitySet="bookTickets" />
+      <End Role="cancelTicket" EntitySet="cancelTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cancelTic__train__45F365D3" Association="Self.FK__cancelTic__train__45F365D3">
+      <End Role="train" EntitySet="trains" />
+      <End Role="cancelTicket" EntitySet="cancelTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cancelTic__user___44FF419A" Association="Self.FK__cancelTic__user___44FF419A">
+      <End Role="user_details" EntitySet="user_details" />
+      <End Role="cancelTicket" EntitySet="cancelTickets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__class_Ava__train__37A5467C" Association="Self.FK__class_Ava__train__37A5467C">
+      <End Role="train" EntitySet="trains" />
+      <End Role="class_Avail" EntitySet="class_Avail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__fare__train_no__398D8EEE" Association="Self.FK__fare__train_no__398D8EEE">
+      <End Role="train" EntitySet="trains" />
+      <End Role="fare" EntitySet="fares" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateBookedTicket">
+      <Parameter Name="TrainNo" Mode="In" Type="Decimal" />
+      <Parameter Name="Class" Mode="In" Type="String" />
+      <Parameter Name="SeatsBooked" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCancelTicket">
+      <Parameter Name="TrainNo" Mode="In" Type="Decimal" />
+      <Parameter Name="Class" Mode="In" Type="String" />
+      <Parameter Name="SeatsBooked" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddclassSeats">
+      <Parameter Name="TrainNo" Mode="In" Type="Decimal" />
+      <Parameter Name="firstAcSeats" Mode="In" Type="Int32" />
+      <Parameter Name="SecAcSeats" Mode="In" Type="Int32" />
+      <Parameter Name="SLSeats" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddclassFair">
+      <Parameter Name="TrainNo" Mode="In" Type="Decimal" />
+      <Parameter Name="firstAcSeatsfare" Mode="In" Type="Int32" />
+      <Parameter Name="SecAcSeatsfare" Mode="In" Type="Int32" />
+      <Parameter Name="SLSeatsfare" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

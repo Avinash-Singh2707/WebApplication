@@ -1,0 +1,24 @@
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.CoreCompileInputs.cache
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.exe.config
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.exe
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.pdb
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.dll
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.xml
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.SqlServer.xml
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.CopyComplete
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.exe
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.pdb
+D:\CSharp Training\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.AssemblyReference.cache
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.exe.config
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.exe
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\RailwaySystem.pdb
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.dll
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.xml
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\bin\Debug\EntityFramework.SqlServer.xml
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.AssemblyReference.cache
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.CoreCompileInputs.cache
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.csproj.CopyComplete
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.exe
+D:\WebApplication\Project\RailwaySystem\RailwaySystem\obj\Debug\RailwaySystem.pdb
