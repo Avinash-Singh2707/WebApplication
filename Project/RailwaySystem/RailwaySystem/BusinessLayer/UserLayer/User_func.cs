@@ -17,7 +17,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
         static string cls;
         static int notic;
         static int uid;
-        public static object ct;             // defining object ct(class-type)
+        //public static object ct;             // defining object ct(class-type)
         
         public static void UserLogin()
         {
@@ -36,15 +36,15 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             else if (n == 2)
             {
                 Console.WriteLine("Enter Your UserId, UserName and Password: ");
-                uid = int.Parse(Console.ReadLine());  //?
+                uid = int.Parse(Console.ReadLine());  
                 us.user_id = uid;
                 us.user_name = Console.ReadLine();
-                //us.Password = Console.ReadLine();
+               
                 us.Password = Admin_func.ReadPassword();
 
                 Rb.user_details.Add(us);
                 Rb.SaveChanges();
-                //Console.WriteLine("Hey"+us.user_id);
+              
 
             }
             else
@@ -60,13 +60,12 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             Console.Write("Enter UserId: ");
             uid = int.Parse(Console.ReadLine());
             Console.Write("Enter Password: ");
-            //string pass = Console.ReadLine();
             string pass = Admin_func.ReadPassword();
             Console.WriteLine();
             bool vl= validate(uid,pass);
             if (vl)
             {
-                //Console.WriteLine();
+               
                 UserOptions();
             }
             else
@@ -86,20 +85,22 @@ namespace RailwaySystem.BusinessLayer.UserLayer
         }
         public static void UserOptions()
         {
-            //Console.WriteLine("1. Show all Train Press 1");
-            Console.WriteLine("============================================================================");
-            Console.WriteLine("\t\tWelcome To User Portal");
-            Console.WriteLine("============================================================================");
-            Console.WriteLine("\t1. Book Tickets -> Press 1");
-            Console.WriteLine("\t2. Cancel Ticket -> Press 2");
-            Console.WriteLine("\t3. Show Booking Details -> Press 3");
-            Console.WriteLine("\t4. Show Cancellation Details -> Press 4");
-            Console.WriteLine("\t5. Exit");
-            Console.Write("YOUR CHOICE: ");
-            int n = int.Parse(Console.ReadLine());
+     
             bool flag = true;
-            //while (flag)
-            //{
+
+            while (flag)
+            {
+
+                Console.WriteLine("============================================================================");
+                Console.WriteLine("\t\tWelcome To User Portal");
+                Console.WriteLine("============================================================================");
+                Console.WriteLine("\t1. Book Tickets -> Press 1");
+                Console.WriteLine("\t2. Cancel Ticket -> Press 2");
+                Console.WriteLine("\t3. Show Booking Details -> Press 3");
+                Console.WriteLine("\t4. Show Cancellation Details -> Press 4");
+                Console.WriteLine("\t5. Exit");
+                Console.Write("YOUR CHOICE: ");
+                int n = int.Parse(Console.ReadLine());
                 switch (n)
                 {
                     case 1:
@@ -107,7 +108,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                             Console.WriteLine("-------------------------------------------------");
                             BookTicket(uid);
                             Console.WriteLine("-------------------------------------------------");
-                            //BookTicket(newUserId);
+                          
                             UserOptions();
                             break;
                         }
@@ -129,7 +130,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                     case 4:
                         {
                             Console.WriteLine("-------------------------------------------------");
-                          
+
                             CanceledTicket(uid);
                             UserOptions();
                             Console.WriteLine("-------------------------------------------------");
@@ -137,16 +138,17 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                         }
                     case 5:
                         {
-                            //flag = false;
+                            flag = false;
+                            Console.WriteLine("<<<---Thank You--->>>");
                             break;
                         }
                     default:
                         Console.WriteLine("Enter the Valid Options from above");
-                        //UserOptions();
+                       
                         break;
                 }
-            
-            
+
+            }
         }
 
 
@@ -157,7 +159,6 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             Console.WriteLine("\t\t---Train Details---");
             Console.WriteLine("-------------------------------------------------");
             var trains = Rb.trains.Where(t => t.isActive == "Active").ToList(); 
-            //var trains = Rb.trains.ToList();
             int ct = 1;
             Console.WriteLine($"->\tTrain-No\t\tTrain-Name\t\tSource\t\tDestination");
             foreach (var train in trains)
@@ -168,14 +169,13 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             }
             Console.WriteLine("-------------------------------------------------");
         }
-        public static void BookTicket(int uid)    // we can add status booked or cancelled....????
+        public static void BookTicket(int uid)    
         {
 
             class_Avail ca = new class_Avail();
             fare f = new fare();
             bookTicket bt = new bookTicket();
             user_details us = new user_details();
-            //Console.WriteLine(us.user_id);
             ShowTrain();
 
             showSeatNCalPrice();
@@ -184,7 +184,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             if (res == 'Y' || res=='y')
             {
                 Console.WriteLine("Please wait for some time....");
-                //Task.Delay()   
+                
                 Thread.Sleep(5000);
                 Console.WriteLine("We are Redirecting to you Booking Details......\n");
                 Thread.Sleep(2000);
@@ -192,7 +192,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 int bookid = r.Next(11111, 99999);      // for generating random number....
                 bt.Book_Id = bookid;
                 bt.Booking_Date_Time = DateTime.Now;
-                //bt.user_id = us.user_id;
+             
                 bt.train_no = trNo;
                 bt.Class_type = cls;
                 bt.NumberTickets = notic;
@@ -209,7 +209,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 Console.WriteLine("\t\t<<--Your Booking Details->>");
                 Console.WriteLine("============================================================================");
                 Console.WriteLine("------------------------------------------------------------------------------------------------");
-                Console.WriteLine($"User ID: {uid} Book IDL: {bookid} Booking Date Time: {bt.Booking_Date_Time} Train Number: {trNo}");
+                Console.WriteLine($"User ID: {uid} Book ID: {bookid} Booking Date Time: {bt.Booking_Date_Time} Train Number: {trNo}");
                 Console.WriteLine($"Class: {cls} Number of Tickets: {notic} Total Fare: {fare} Status: Booked");
                 Console.WriteLine("-------------------------------------------------------------------------------------------------");
 
@@ -225,56 +225,22 @@ namespace RailwaySystem.BusinessLayer.UserLayer
 
            
 
-            //bt.user_id = Rb.user_details.Where(u=>u.user_id==UriIdnScope)     // here...   user-id = null
-
-            //bt.user_id = Rb.user_details
-            //bt.user_id = Rb.user_details.Find(us.user_id);
-            //bt.user_id = Rb.user_details.Where(u => u.user_id = u.user_id).ToList();
-
-            //List<user_details> user_details = Rb.user_details.Where(u => u.user_id == u.user_id).ToList();
-            //string userNamefromDB = user_details.ToString();
-            //bt.user_id = userNamefromDB;
-
-                 // ERROR
-
-
-            //Console.WriteLine("Enter class and Number of tickets You want to book: ");
-            //string cls = Console.ReadLine();
-            //int notic = int.Parse(Console.ReadLine());
-            //if(cls=="1AC")
-            //{
-
-            //}
-            //bt.total_fare = notic;
-            //Rb.bookTickets.Add(bt);
-
-
-
-            //Rb.UpdateBookedTicket(trNo,cls,notic);   // calling the stored procedure.....
-            //Rb.SaveChanges();
-
-
-
-
-            // call proc
-            //
            
-           
-            //Task.Delay(4000);      // then show msg generating ur tickets.. then show the tickets...
-
         }
         public static void showSeatNCalPrice()
         {
-            //int fare=0;
+            
             bookTicket bt = new bookTicket();
+            hey:
             Console.Write("Enter Train Number You want to Book:  ");
             trNo = int.Parse(Console.ReadLine());
 
-            //var trSeat = Rb.class_Avail.Where(t => t.train_no == trNo);
-            var trSeat = Rb.class_Avail.FirstOrDefault(t=>t.train_no==trNo);    //??? why find not work....
+         
+            var trSeat = Rb.class_Avail.FirstOrDefault(t=>t.train_no==trNo);   
             var seatPrice = Rb.fares.FirstOrDefault(t => t.train_no == trNo);
-
-            if (trSeat != null)
+            var trSeat1 = Rb.trains.Where( t=>t.train_no==trNo && t.isActive=="Active").FirstOrDefault();
+          
+            if (trSeat1!=null)
             {
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("\tClass With fares");
@@ -287,52 +253,46 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 Console.WriteLine("\t---------Select Class----------");
                 Console.WriteLine("\tType 1AC for 1AC\n\tType 2AC for 2AC\n\tType SL for Sleeper");
 
-                //Console.WriteLine("")
-                //foreach (var v in trSeat)
-                //{
-                //    Console.WriteLine(v.train_no + " " + v.C1_AC_seat_Avail);
-                //}
+               
 
             }
             else
             {
                 Console.WriteLine("No Train Found.. Please check the train Number");
+                goto hey;
+
             }
             // Calculate Fares....
 
             Console.Write("Type Class: ");
             cls = Console.ReadLine();
-            Console.Write("Enter the Number of Tickets you want to book: ");
+            start:           // Defining Goto level
+            Console.Write("Enter the Number of Tickets you want to book(Max 5): ");
             notic = int.Parse(Console.ReadLine());          // number of seats...
-            if (cls == "1AC".ToUpper())
+            if (notic > 5)
             {
-                fare = (int)(notic * seatPrice.C1_AC_fare);
+                Console.WriteLine("You can book maximum 5 tickets");
+                goto start;
             }
-            else if (cls == "2AC".ToUpper())
+            else
             {
-                fare = ((int)(notic * seatPrice.C2_AC_fare));
-            }
-            else if(cls=="SL".ToUpper())
-            {
-                fare = (int)(notic * seatPrice.SL_fare);
-            }
-            
-            
-            Console.WriteLine("Your Total Fare is: "+ fare);
-            //Console.WriteLine("Press Y to continue and N to exits");
-            
+                if (cls == "1AC".ToUpper())
+                {
+                    fare = (int)(notic * seatPrice.C1_AC_fare);
+                }
+                else if (cls == "2AC".ToUpper())
+                {
+                    fare = ((int)(notic * seatPrice.C2_AC_fare));
+                }
+                else if (cls == "SL".ToUpper())
+                {
+                    fare = (int)(notic * seatPrice.SL_fare);
+                }
 
-            
-            //Rb.bookTickets.Add(bt);
+
+                Console.WriteLine("Your Total Fare is: " + fare);
+            }
            
-            
-            //Console.WriteLine("Your Ticked has been Booked");
-            //Rb.SaveChanges();
-            //Rb.bookTickets.Add(bt);
-
-
-
-            // Rb.UpdateBookedTicket(trNo, cls, notic);    // call proc
 
         }
 
@@ -362,7 +322,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 char res = char.Parse(Console.ReadLine());
                 if (res == 'Y' || res == 'y')
                 {
-                    Rb.cancelTickets.Add(ct);           // bookId(fk in cancel ticket) is showing null as u remove primary key from booktable,
+                    Rb.cancelTickets.Add(ct);          
 
                     x.Status = "Cancelled";          // here I am changing status of booking details...
                     //calling stored procedure for updating seats
@@ -372,8 +332,17 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                     Rb.UpdateCancelTicket(trno, classtype, nutic);
 
 
-                    //Rb.SaveChanges();
                     Rb.SaveChanges();
+                    Console.WriteLine("\t\tYour Ticket has been Cancelled");
+                    Console.WriteLine("============================================================================");
+                    Console.WriteLine("\t\t<<--Your Cancellation Details->>");
+                    Console.WriteLine("============================================================================");
+                    Console.WriteLine("------------------------------------------------------------------------------------------------");
+                    Console.WriteLine($"User ID: {uid} Cancel ID: {cid} Cancelled Date Time: {ct.Cancelled_date_time} Train Number: {x.train_no}");
+                    Console.WriteLine($"Class: {x.Class_type} Number of Tickets: {x.NumberTickets} Total Fare: {ct.Refund_Amount} Status: Cancelled");
+                    Console.WriteLine("-------------------------------------------------------------------------------------------------");
+
+
                 }
                 else if(res=='N' || res == 'n')
                 {
@@ -389,30 +358,12 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             }
         }      
 
-        //public static void ShowBookedTickets()
-        //{
-        //    Console.WriteLine("Enter Your book-Id: ");
-        //    int bookid = int.Parse(Console.ReadLine());
-        //    var bt = Rb.bookTickets.SingleOrDefault(b => b.Book_Id==bookid);       // Find not work....
-        //    if (bt != null)
-        //    {
-        //        Console.WriteLine("Your Booking Details: ");
-        //        Console.WriteLine($"Book ID: {bt.Book_Id} Train Number: {bt.train_no} Booking-Date-Time: {bt.Booking_Date_Time} Class_Type: " +
-        //            $"{bt.Class_type} Number of Tickets: {bt.NumberTickets} Total Fare: {bt.total_fare}");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("No Book ID found");
-        //    }
-
-
-        //}
 
         static void ShowBookedTicket(int uid)
         {
             var booked_tkt = Rb.bookTickets.Where(bt => bt.user_id == uid);
-            //var booked_tkt = Rb.bookTickets.Find(uid);
-            if (booked_tkt!=null)            //The Any() method checks if there are any matching booked tickets.  NOT Working->if(booked_tkt!=null)
+         
+            if (booked_tkt.Any())            //The Any() method checks if there are any matching booked tickets.  NOT Working->if(booked_tkt!=null)
             {
                 foreach (var bt in booked_tkt)
                 {
@@ -428,41 +379,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
             }
         }
 
-        //public static void ShowcCancelTickets()
-        //{
-        //    Console.WriteLine("Enter Your Cancel-Id: ");
-        //    int cd = int.Parse(Console.ReadLine());
-        //    var cid = Rb.cancelTickets.SingleOrDefault(c=>c.Cancel_Id==cd);       // Find not work....
-        //    if (cid != null)
-        //    {
-        //        Console.WriteLine("Your Cancellation Details: ");
-        //        // here we are just doing inner join of booktickets and cancel tickets..
-
-        //        var query = from bookTicket in Rb.bookTickets
-        //                    join cancelTicket in Rb.cancelTickets
-        //                    on bookTicket.user_id equals cancelTicket.user_id
-        //                    select new
-        //                    {
-        //                        ct = bookTicket.Class_type,             // here we are just retrieving the properties...
-        //                        nt = bookTicket.NumberTickets,
-
-
-        //                        //CustomerName = customer.Name,
-        //                        //OrderId = order.OrderId,
-        //                        //OrderDate = order.OrderDate
-        //                    };
-
-        //        var res = query.ToList();
-        //        Console.WriteLine($"Class Type: {ct}");
-        //        //Console.WriteLine($"Book ID: {bt.Book_Id} Train Number: {bt.train_no} Booking-Date-Time: {bt.Booking_Date_Time} Class_Type: " +
-        //        //    $"{bt.Class_type} Number of Tickets: {bt.NumberTickets} Total Fare: {bt.total_fare}");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("No Book ID found");
-        //    }
-        //}
-
+       
         static void CanceledTicket(int uid)
         {
             var cancel_tkt = Rb.cancelTickets.Where(bt => bt.user_id == uid);
@@ -482,5 +399,11 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 Console.WriteLine("No Cancellation Details Found");
             }
         }
+
+        ////Passenger Details
+        //public static void PassDet()
+        //{
+
+        //}
     }
 }

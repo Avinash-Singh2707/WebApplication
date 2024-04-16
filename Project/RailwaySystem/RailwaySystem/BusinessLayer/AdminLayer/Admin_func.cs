@@ -9,7 +9,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
 {
     class Admin_func
     {
-        //using (var Rb = new RailDBEntities())
+        
         static RailDBEntities Rb = new RailDBEntities();
         static train t = new train();
         public static void AdminLogin()
@@ -22,7 +22,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
     
             int Aid = int.Parse(Console.ReadLine());
             Console.Write("Enter Password: ");
-            //string pass = Console.ReadLine();
+           
             string pass= ReadPassword();                  //Calling ReadPassword for hiding password...
 
             Console.WriteLine("\nPlease Wait We are Validating......");
@@ -52,18 +52,19 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
         }
         public static void AdminOptions()
         {
-            bool flag = true;   //
-            while (flag) { //
-            Console.WriteLine("============================================================================");
-            Console.WriteLine("\t\tWelcome To Admin Portal");
-            Console.WriteLine("============================================================================");
-            Console.WriteLine("\t1. Add Train -> Press 1");
-            Console.WriteLine("\t2. Modify Train -> Press 2");
-            Console.WriteLine("\t3. Delete Train -> Press 3");
-            Console.WriteLine("\t4. Show trains Details -> Press 4");
-            Console.WriteLine("\t5. Exit");
-            Console.Write("YOUR CHOICE: ");
-            int n = int.Parse(Console.ReadLine());
+            bool flag = true;  
+            while (flag) 
+            { 
+                Console.WriteLine("============================================================================");
+                Console.WriteLine("\t\tWelcome To Admin Portal");
+                Console.WriteLine("============================================================================");
+                Console.WriteLine("\t1. Add Train -> Press 1");
+                Console.WriteLine("\t2. Modify Train -> Press 2");
+                Console.WriteLine("\t3. Delete Train -> Press 3");
+                Console.WriteLine("\t4. Show trains Details -> Press 4");
+                Console.WriteLine("\t5. Exit");
+                Console.Write("YOUR CHOICE: ");
+                int n = int.Parse(Console.ReadLine());
                 switch (n)
                 {
                     case 1:
@@ -86,24 +87,21 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
                         Console.WriteLine("-------------------------------------------------");
                         ShowTrainAdmin();
                         Console.WriteLine("-------------------------------------------------");
-                        //Console.WriteLine("Press TAB or ENTER to Continue.....");
-                        //Console.ReadKey();
-                        //Console.Clear();
-                        //AdminOptions();
+                        
 
                         break;
                     case 5:
-                        flag = false;   //
+                        flag = false;   
                         Console.WriteLine("==============================================================");
                         Console.WriteLine("\t\tThank YOU....");
                         Console.WriteLine("==============================================================");
                         break;
                     default:
                         Console.WriteLine("Enter Valid Options from above");
-                        //AdminOptions();
+                       
                         break;
                 }
-            } //
+            } 
 
         }
         public static void Addtrain()
@@ -148,7 +146,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
                 int SLSeatsfare = int.Parse(Console.ReadLine());
                 Rb.AddclassFair(t.train_no, firstAcSeatsfare, SecAcSeatsfare, SLSeatsfare); // calling procedure to add the fares....
 
-                //Rb.SaveChanges();
+               
                 Console.WriteLine("Train Added Successfull");
             }
             else if(n==2)
@@ -181,7 +179,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
                     Rb.SaveChanges();
                     Console.WriteLine("Your Train Name Has been modified...\n");
                   
-                    //AdminOptions();
+                    
 
                 }
                 else if(ans == "N")
@@ -189,13 +187,13 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
                     Console.WriteLine("==============================================================");
                     Console.WriteLine("\t\tThank for Your Time");
                     Console.WriteLine("==============================================================");
-                    //AdminOptions();
+                    
                 }
 
             }
             else
             {
-                //AdminOptions();
+                
                 Console.WriteLine("==============================================================");
                 Console.WriteLine("\t\tNo Train Found");
                 Console.WriteLine("==============================================================");
@@ -218,9 +216,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
                 if(ans=="Y")
                 {
 
-                    //Rb.trains.Remove(trainRemove);
-
-                    //Rb.SaveChanges();
+                    
                     trainRemove.isActive = "InActive";              // implementing soft delete....
                     Rb.SaveChanges();
                     Console.WriteLine("Your Train Has been Deleted....\n");
@@ -246,7 +242,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("\t\t---Train Details---");
             Console.WriteLine("-------------------------------------------------");
-            //var trains = Rb.trains.Where(t => t.isActive == "Active").ToList();
+           
             var trains = Rb.trains.ToList();
             int ct = 1;
             Console.WriteLine($"->\tTrain-No\t\tTrain-Name\t\tSource\t\tDestination\t\tStatus");
@@ -267,10 +263,10 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
             {
                 key = Console.ReadKey(true);
 
-                // Ignore any key that's not a backspace or Enter
+                
                 if (key.Key != ConsoleKey.Backspace && key.Key != ConsoleKey.Enter)
                 {
-                    // Append the character to the password
+                    
                     pass += key.KeyChar;
                     Console.Write("*"); // Print '*' instead of the actual character
                 }

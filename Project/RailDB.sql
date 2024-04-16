@@ -14,15 +14,8 @@ insert into train values(12530,'PPT Express','Lucknow','Gorakhpur'),
 -- adding isActive to Train_details table
 -- And Implementing SOFT Delete...
 alter table train add isActive varchar(10) not null default 'Active'
-select * from train
-
-delete from train where train_no=14384
 
 
-
-
-select * from train
---drop table train
 
 
 
@@ -47,12 +40,11 @@ train_no numeric(5) foreign key references train(train_no),
 [2-AC-fare] int,
 SL_fare int,
 )
-drop table fare
---delete from fare   -- only delete values...
+
 insert into fare values(12530,3200,2100,1000),(10390,5000,3000,1500),(34500,4500,2200,1100);
 select * from fare
 delete from fare where train_no=14384
---drop table fare
+
 
 --User Table
 create table user_details(
@@ -62,8 +54,7 @@ create table user_details(
 -- adding password to user_details table
 alter table user_details add [Password] varchar(10) not null
 
-select * from user_details
-delete from user_details where [user-id]=3456
+
 
 -- Admin details
 create table admin(
@@ -73,8 +64,9 @@ create table admin(
 )
 
 insert into admin values(123,'Avinash','@Avi123')
-select * from admin
 
+
+--- Booked Tickets
 create table bookTicket(
 [Book-Id] numeric(10) primary key,
 [user-id] int foreign key references user_details([user-id]),
@@ -87,9 +79,9 @@ alter table bookTicket add Class_type varchar(10) not null
 alter table bookTicket add NumberTickets int not null
 alter table bookTicket add [Status] varchar(10) not null default 'Booked'
 
-select * from bookTicket
---delete bookTicket where [Book-Id]=24907
 
+
+-- Cancelled Tickets
 create table cancelTicket(
 [Cancel-Id] numeric(10) primary key,
 [Book-Id] numeric(10) foreign key references bookTicket([Book-Id]),
@@ -98,9 +90,9 @@ train_no numeric(5) foreign key references train(train_no),
 [Cancelled-date-time]  date,
 [Refund-Amount] float,)
 
---delete cancelTicket where [user-id] =123
-select * from cancelTicket
-drop table cancelTicket
+
+
+
 
 -- stored procedure 
 CREATE or alter PROCEDURE UpdateBookedTicket( @TrainNo NUMERIC(5),
@@ -169,3 +161,12 @@ CREATE or alter PROCEDURE AddclassFair(
 AS
 insert into fare (train_no,[1-AC-fare],[2-AC-fare],SL_fare) values(@TrainNo,@firstAcSeatsfare,@SecAcSeatsfare,@SLSeatsfare)
 
+
+------------------------------------
+select * from train
+select * from fare
+select * from class_Avail
+select * from user_details
+select * from admin
+select * from cancelTicket
+select * from bookTicket
