@@ -138,6 +138,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                         }
                     case 5:
                         {
+                            Console.Clear();
                             flag = false;
                             Console.WriteLine("<<<---Thank You--->>>");
                             break;

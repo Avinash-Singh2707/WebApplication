@@ -12,10 +12,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
         
         static RailDBEntities Rb = new RailDBEntities();
         static train t = new train();
-        public static void AdminLogin()
-        {
-
-        }
+      
         public static void ValidateAdmin()
         {
             Console.Write("Enter AdminId: ");
@@ -91,6 +88,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
 
                         break;
                     case 5:
+                        Console.Clear();
                         flag = false;   
                         Console.WriteLine("==============================================================");
                         Console.WriteLine("\t\tThank YOU....");
