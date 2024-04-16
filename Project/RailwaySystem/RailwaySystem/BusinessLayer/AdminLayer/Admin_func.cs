@@ -104,7 +104,7 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
         }
         public static void Addtrain()
         {
-            Console.WriteLine("Press 1 for New Train\nPress 2 for Existing train");
+            Console.WriteLine("Press 1 for New Train\nPress 2 for Existing train");  //Existing Train means the train which you are deleted using soft delete.
             Console.Write("You Want to add Existing Train or New train: ");
             int n = int.Parse(Console.ReadLine());
 
@@ -149,10 +149,10 @@ namespace RailwaySystem.BusinessLayer.AdminLayer
             }
             else if(n==2)
             {
-                Console.Write("Enter Existing Train Number: ");
+                Console.Write("Enter Existing Train Number: "); 
                 int trno = int.Parse(Console.ReadLine());
                 var tr = Rb.trains.Find(trno);
-                tr.isActive = "Active";
+                tr.isActive = "Active";               // Just Switching InActive to Active.....
                 Rb.SaveChanges();
                 Console.WriteLine("Your Existing Train Added Successfully");
             }
