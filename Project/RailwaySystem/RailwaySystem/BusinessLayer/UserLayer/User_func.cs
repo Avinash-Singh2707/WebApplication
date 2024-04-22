@@ -206,6 +206,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 Rb.SaveChanges();
 
                 Rb.UpdateBookedTicket(trNo, cls, notic);   // call procedure to update the seats...
+                //Rb.SaveChanges();          //   Not Updating the seats at run time...(CLOSE CONSOLE THEN RESTART AGAIN....)
                 Console.WriteLine("============================================================================");
                 Console.WriteLine("\t\t<<--Your Booking Details->>");
                 Console.WriteLine("============================================================================");
@@ -253,6 +254,7 @@ namespace RailwaySystem.BusinessLayer.UserLayer
                 Console.WriteLine($"\tSleeper    : {trSeat.SL_seat_Avail}               : {seatPrice.SL_fare}");
                 Console.WriteLine("\t---------Select Class----------");
                 Console.WriteLine("\tType 1AC for 1AC\n\tType 2AC for 2AC\n\tType SL for Sleeper");
+                
 
                
 
