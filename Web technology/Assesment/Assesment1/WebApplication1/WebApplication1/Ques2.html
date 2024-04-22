@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <script type="text/javascript">
+        function multiply() {
+            var num1 = document.getElementById('TextBox1').value;
+            var num2 = document.getElementById('TextBox2').value;
+            var result = (num1) * (num2);
+            document.getElementById('lbl1').innerText = "The Result is: " + result;
+        }
+
+        function divide() {
+            var num1 = document.getElementById('TextBox1').value;
+            var num2 = document.getElementById('TextBox2').value;
+            var result = (num1) /(num2);
+            document.getElementById('lbl1').innerText = "The Result is: " + result;
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <label for="TextBox1">1st Number:</label>
+        <input type="text" id="TextBox1" />
+        <br />
+        <br />
+    </div>
+    <div>
+        <label for="TextBox2">2nd Number:</label>
+        <input type="text" id="TextBox2" />
+        <br />
+        <br />
+    </div>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <br />
+    <br />
+    <label id="lbl1"></label>
+</body>
+</html>

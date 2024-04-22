@@ -1,0 +1,28 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2></h2>
+    <div id="output"></div>
+
+    <script>
+
+        let outut = "";
+
+        for (let i = 0; i <= 15; i++) {
+
+            if (i % 2 === 0) {
+            output += ""+i + " is even<br\>";
+            } else {
+            output +=""+ i + " is odd<br\>";
+            }
+        }
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>
