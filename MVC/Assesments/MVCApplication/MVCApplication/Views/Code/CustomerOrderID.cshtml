@@ -1,0 +1,22 @@
+﻿@model  MVCApplication.Models.Customer
+@{
+    ViewBag.Title = "CustomerOrderID";
+}
+
+<h2>CustomerOrderID</h2>
+
+@if (Model != null)
+{
+<div>
+    <h4>Order ID: 10248</h4>
+    <h6>Customer ID: @Model.CustomerID</h6>
+    <h6>Company Name: @Model.CompanyName</h6>
+    <h6>Contact Name: @Model.ContactName</h6>
+    <h6>Contact Title: @Model.ContactTitle</h6>
+</div> 
+}
+else
+{
+<p>No customer found with given ID</p>
+}
+
