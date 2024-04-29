@@ -20,7 +20,7 @@ namespace CodeFirstApproach.Controllers
             return View(db.movies.ToList());
         }
 
-        // GET: Movies/Details/5
+     
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,17 +35,15 @@ namespace CodeFirstApproach.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Create
+        
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Movies/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "mid,Moviename,DateofRelease")] Movie movie)
         {
             if (ModelState.IsValid)
@@ -58,7 +56,7 @@ namespace CodeFirstApproach.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Edit/5
+       
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,11 +71,9 @@ namespace CodeFirstApproach.Controllers
             return View(movie);
         }
 
-        // POST: Movies/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult Edit([Bind(Include = "mid,Moviename,DateofRelease")] Movie movie)
         {
             if (ModelState.IsValid)
@@ -89,7 +85,7 @@ namespace CodeFirstApproach.Controllers
             return View(movie);
         }
 
-        // GET: Movies/Delete/5
+  
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,24 +100,15 @@ namespace CodeFirstApproach.Controllers
             return View(movie);
         }
 
-        // POST: Movies/Delete/5
+        
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
             Movie movie = db.movies.Find(id);
             db.movies.Remove(movie);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

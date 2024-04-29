@@ -80,3 +80,4 @@ D:\WebApplication\MVC\Assesments\CodeFirstApproach\CodeFirstApproach\bin\Microso
 D:\WebApplication\MVC\Assesments\CodeFirstApproach\CodeFirstApproach\obj\Debug\CodeFirstApproach.csproj.CopyComplete
 D:\WebApplication\MVC\Assesments\CodeFirstApproach\CodeFirstApproach\obj\Debug\CodeFirstApproach.dll
 D:\WebApplication\MVC\Assesments\CodeFirstApproach\CodeFirstApproach\obj\Debug\CodeFirstApproach.pdb
+D:\WebApplication\MVC\Assesments\CodeFirstApproach\CodeFirstApproach\obj\Debug\CodeFirstApproach.csproj.AssemblyReference.cache
