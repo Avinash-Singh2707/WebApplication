@@ -7,12 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//Fetch the connection string from AppSetting.json file
+
 builder.Services.AddDbContext<NorthwindContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("NorthwindConnection")));
 
 
-//DI Service Lifetime
+
 builder.Services.AddScoped<IOrder, OrderServices>();
 
 var app = builder.Build();
