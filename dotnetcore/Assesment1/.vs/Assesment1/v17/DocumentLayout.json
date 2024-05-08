@@ -1,0 +1,181 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WebApplication\\dotnetcore\\Assesment1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\views\\order\\highestordercustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\views\\order\\highestordercustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\views\\order\\customerdetailsbyorderdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\views\\order\\customerdetailsbyorderdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\views\\order\\allorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\views\\order\\allorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\repository\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\repository\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\views\\order\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\views\\order\\placeorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\repository\\iorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\repository\\iorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|d:\\webapplication\\dotnetcore\\assesment1\\assesment1\\models\\northwindcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB5CDF80-6141-4248-864B-B8357F788C80}|Assesment1\\Assesment1.csproj|solutionrelative:assesment1\\models\\northwindcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Assesment1\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Assesment1\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:42:23.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderServices.cs",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Repository\\OrderServices.cs",
+              "RelativeDocumentMoniker": "Assesment1\\Repository\\OrderServices.cs",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Repository\\OrderServices.cs",
+              "RelativeToolTip": "Assesment1\\Repository\\OrderServices.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAwB4AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:36:32.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerDetailsByOrderDate.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\CustomerDetailsByOrderDate.cshtml",
+              "RelativeDocumentMoniker": "Assesment1\\Views\\Order\\CustomerDetailsByOrderDate.cshtml",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\CustomerDetailsByOrderDate.cshtml",
+              "RelativeToolTip": "Assesment1\\Views\\Order\\CustomerDetailsByOrderDate.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAswCAAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T05:51:41.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AllOrders.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\AllOrders.cshtml",
+              "RelativeDocumentMoniker": "Assesment1\\Views\\Order\\AllOrders.cshtml",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\AllOrders.cshtml",
+              "RelativeToolTip": "Assesment1\\Views\\Order\\AllOrders.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAswBoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T06:04:03.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HighestOrderCustomer.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\HighestOrderCustomer.cshtml",
+              "RelativeDocumentMoniker": "Assesment1\\Views\\Order\\HighestOrderCustomer.cshtml",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\HighestOrderCustomer.cshtml",
+              "RelativeToolTip": "Assesment1\\Views\\Order\\HighestOrderCustomer.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T05:46:15.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlaceOrder.cshtml",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\PlaceOrder.cshtml",
+              "RelativeDocumentMoniker": "Assesment1\\Views\\Order\\PlaceOrder.cshtml",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Views\\Order\\PlaceOrder.cshtml",
+              "RelativeToolTip": "Assesment1\\Views\\Order\\PlaceOrder.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-08T06:13:49.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOrder.cs",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Repository\\IOrder.cs",
+              "RelativeDocumentMoniker": "Assesment1\\Repository\\IOrder.cs",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Repository\\IOrder.cs",
+              "RelativeToolTip": "Assesment1\\Repository\\IOrder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:36:00.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Program.cs",
+              "RelativeDocumentMoniker": "Assesment1\\Program.cs",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Program.cs",
+              "RelativeToolTip": "Assesment1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:29:57.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NorthwindContext.cs",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Models\\NorthwindContext.cs",
+              "RelativeDocumentMoniker": "Assesment1\\Models\\NorthwindContext.cs",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\Models\\NorthwindContext.cs",
+              "RelativeToolTip": "Assesment1\\Models\\NorthwindContext.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAqwA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T04:28:24.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\appsettings.json",
+              "RelativeDocumentMoniker": "Assesment1\\appsettings.json",
+              "ToolTip": "D:\\WebApplication\\dotnetcore\\Assesment1\\Assesment1\\appsettings.json",
+              "RelativeToolTip": "Assesment1\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAB8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-08T04:23:52.041Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
